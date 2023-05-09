@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>moqups - RevoU</title>
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="logo">
+        <img
+          src="https://images.moqups.com/repo/9PZZyyGjJ8/p_Tf3tCodSPL/_clipboard/f5dWWU7sxe.svg?Expires=1683969776&Key-Pair-Id=K1TPUF1X6HKIYU&Signature=KjQCnSPC-eFKOMD2p6ts22RZMAQxWHCcRIN4OekyHF03Q~ukVy2PDS7JMIQMS~WM~nzXnk7odm2ScvAFIPog1uM1yKKDnBCPi2Q~pP1iHAQ6jVyYeSCa8jxEb2YPTMZVn2EDQaLV5Y3UO6W8-f5219knxZxDZGtUvVPiXW9ghB7bcSIuBuQRBKsw5BC-kMrRLb8B3V-yYUYZ1YtLIcPzIa4xCe95I39YwbhM2lhXV17JjvVG7L0ayDqgEMMMz5uq7oqtFaD0GMrh0Q0o9cDRfGUfJ4pK4lCrTFqqXZDL6GUHYTnV1tYPswXMTsVMgPDe8ZISaPQMg5FRFANhycxmBQ__"
+          alt="moqups logo"
+        />
+      </div>
+      <nav>
+        <a href="#home" class="nav-item nav-first">Home</a>
+        <a href="#our-package" class="nav-item nav-center">Our Package</a>
+        <a href="#call-us" class="nav-item nav-last">Call Us</a>
+      </nav>
+    </header>
+    <main>
+      <section id="home">
+        <div class="heading">
+          <h1 class="heading-text">Top Rated E-Groceries Shop in Indonesian</h1>
+          <p>Every Day with best ingredients</p>
+        </div>
+        <div class="content-container">
+          <div class="home-content">
+            <div class="home-left">
+              <div class="slide-container">
+                <img
+                  class="image-slide"
+                  src="./assets/vegie1.jpg"
+                  alt="image of vegetables"
+                />
+                <img
+                  class="image-slide"
+                  src="./assets/fruit.jpg"
+                  alt="image of fruits"
+                />
+                <img
+                  class="image-slide"
+                  src="./assets/spices.jpg"
+                  alt="image of spices"
+                />
+                <img
+                  class="image-slide"
+                  src="./assets/vegie2.jpg"
+                  alt="image of vegetables"
+                />
+                <button class="btn-arrow arrow-left" onclick="countDivs(-1)">
+                  &#10094;
+                </button>
+                <button class="btn-arrow arrow-right" onclick="countDivs(1)">
+                  &#10095;
+                </button>
+              </div>
+
+              <div class="testimony">
+                <em>"setiap hari beli sayur buah yang fresh disini "</em>
+                <div class="user">
+                  <i class="fa fa-user-circle fa-2x" aria-hidden="true"></i>
+                  <div class="nama-user">
+                    <h4>Florence Hughes</h4>
+                    <em>Ibu Rumah Tangga, 28</em>
+                  </div>
+                </div>
+                <div class="border-section"></div>
+              </div>
+              <div class="feature">
+                <h4>
+                  Use this space to provide users with more information about
+                  your offer. Consider it a follow-up to your headline and
+                  explain the benefits of your service or product
+                </h4>
+                <div class="feature-lists">
+                  <div class="feature-item">
+                    <div class="text-icon"><span>1</span></div>
+                    <p class="feat-desc">
+                      Your first feature, written in the form of a benefit
+                      statement.
+                    </p>
+                  </div>
+                  <div class="feature-item">
+                    <div class="text-icon"><span>2</span></div>
+                    <p class="feat-desc">
+                      Your second feature, written in the form of a benefit
+                      statement.
+                    </p>
+                  </div>
+                  <div class="feature-item">
+                    <div class="text-icon"><span>3</span></div>
+                    <p class="feat-desc">
+                      Your third feature, written in the form of a benefit
+                      statement.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="home-right">
+              <div class="form-heading">
+                <h3>Contact Us</h3>
+                <p>
+                  Sales akan menghubungi anda 1x24 jam setelah data kami terima
+                </p>
+              </div>
+              <form name="contactUs" onsubmit="return validateForm()">
+                <div class="input-group">
+                  <label for="name">Your Name:</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="First and last name"
+                  />
+                </div>
+                <div class="input-group">
+                  <label for="email">Email Address:</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="example@email.com"
+                  />
+                </div>
+                <div class="input-group">
+                  <label for="phone">Phone Number:</label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="08**********"
+                  />
+                </div>
+                <div class="input-group">
+                  <label for="message">Message:</label>
+                  <textarea
+                    name="message"
+                    id="message"
+                    cols="10"
+                    rows="5"
+                  ></textarea>
+                </div>
+                <button class="btn" type="submit">SEND</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="our-package">
+        <div class="jumbotron">
+          <span class="heading-text">Our Package</span>
+        </div>
+        <div class="content-container">
+          <div class="grid-container">
+            <div class="grid-item">
+              <div class="text-icon">
+                <i class="fa fa-lightbulb-o fa-lg" aria-hidden="true"></i>
+              </div>
+              <div class="package-text">
+                <h4>Fresh Vegetable</h4>
+                <p>Sayuran segar langsung dari sumber pertanian terbaik</p>
+              </div>
+            </div>
+            <div class="grid-item">
+              <div class="text-icon">
+                <i class="fa fa-lightbulb-o fa-lg" aria-hidden="true"></i>
+              </div>
+              <div class="package-text">
+                <h4>Fresh Vegetable</h4>
+                <p>Sayuran segar langsung dari sumber pertanian terbaik</p>
+              </div>
+            </div>
+            <div class="grid-item">
+              <div class="text-icon">
+                <i class="fa fa-lightbulb-o fa-lg" aria-hidden="true"></i>
+              </div>
+              <div class="package-text">
+                <h4>Fresh Vegetable</h4>
+                <p>Sayuran segar langsung dari sumber pertanian terbaik</p>
+              </div>
+            </div>
+          </div>
+          <div class="border-section"></div>
+          <div class="grid-container">
+            <div class="grid-item">
+              <div class="text-icon">
+                <i class="fa fa-lightbulb-o fa-lg" aria-hidden="true"></i>
+              </div>
+              <div class="package-text">
+                <h4>Fresh Vegetable</h4>
+                <p>Sayuran segar langsung dari sumber pertanian terbaik</p>
+              </div>
+            </div>
+            <div class="grid-item">
+              <div class="text-icon">
+                <i class="fa fa-lightbulb-o fa-lg" aria-hidden="true"></i>
+              </div>
+              <div class="package-text">
+                <h4>Fresh Vegetable</h4>
+                <p>Sayuran segar langsung dari sumber pertanian terbaik</p>
+              </div>
+            </div>
+            <div class="grid-item">
+              <div class="text-icon">
+                <i class="fa fa-lightbulb-o fa-lg" aria-hidden="true"></i>
+              </div>
+              <div class="package-text">
+                <h4>Fresh Vegetable</h4>
+                <p>Sayuran segar langsung dari sumber pertanian terbaik</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="call-us">
+        <div class="cta-container">
+          <div class="heading-text">Your Closing Argument headline</div>
+          <p>
+            Suspendisse egestas rhoncus urna in bibendum. Donec urna neque,
+            euismod sed justo quis, convallis tincidunt risus. Phasellus
+            fringilla odio vel erat fringilla,
+          </p>
+          <button class="btn cta">CALL TO ACTION</button>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-logo">
+        <img
+          src="https://images.moqups.com/repo/9PZZyyGjJ8/p_Tf3tCodSPL/_clipboard/f5dWWU7sxe.svg?Expires=1683969776&Key-Pair-Id=K1TPUF1X6HKIYU&Signature=KjQCnSPC-eFKOMD2p6ts22RZMAQxWHCcRIN4OekyHF03Q~ukVy2PDS7JMIQMS~WM~nzXnk7odm2ScvAFIPog1uM1yKKDnBCPi2Q~pP1iHAQ6jVyYeSCa8jxEb2YPTMZVn2EDQaLV5Y3UO6W8-f5219knxZxDZGtUvVPiXW9ghB7bcSIuBuQRBKsw5BC-kMrRLb8B3V-yYUYZ1YtLIcPzIa4xCe95I39YwbhM2lhXV17JjvVG7L0ayDqgEMMMz5uq7oqtFaD0GMrh0Q0o9cDRfGUfJ4pK4lCrTFqqXZDL6GUHYTnV1tYPswXMTsVMgPDe8ZISaPQMg5FRFANhycxmBQ__"
+          alt="moqups logo"
+        />
+      </div>
+      <div class="term-service">
+        <a href="#">Term of Service</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+      <p class="copyright">&#169; 2019 Moqups</p>
+    </footer>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
