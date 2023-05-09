@@ -34,3 +34,20 @@ function showDiv(n) {
 setInterval(() => {
   countDivs(1);
 }, 3000);
+
+// Hide Navbar on scroll
+function hideNav() {
+  var prevScrollpos;
+  // = window.pageYOffset;
+  window.onscroll = function () {
+    var currentScrollPos = window.pageYOffset;
+    if (currentScrollPos > prevScrollpos && currentScrollPos > 10) {
+      document.getElementById('navbar').style.top = '-164px';
+    } else {
+      document.getElementById('navbar').style.top = '0px';
+    }
+    prevScrollpos = currentScrollPos;
+  };
+}
+
+hideNav();
