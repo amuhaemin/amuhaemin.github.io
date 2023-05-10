@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 :root {
   --text: #798da3;
   --container-bg: #edf0f4;
@@ -13,7 +14,7 @@
 }
 
 body {
-  font-family: sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 @media only screen and (max-width: 767px) {
@@ -71,8 +72,8 @@ nav {
 .nav-item {
   color: var(--btn-bg);
   text-decoration: none;
-  border-bottom: 1px solid grey;
-  border-top: 1px solid grey;
+  border-bottom: 1px solid var(--btn-bg);
+  border-top: 1px solid var(--btn-bg);
   padding: 0.5rem 1rem;
   text-align: center;
 }
@@ -80,16 +81,16 @@ nav {
   background-color: var(--container-bg);
 }
 .nav-first {
-  border-left: 1px solid grey;
+  border-left: 1px solid var(--btn-bg);
   border-radius: 5px 0 0 5px;
   border-right: none;
 }
 .nav-center {
-  border-left: 1px solid grey;
-  border-right: 1px solid grey;
+  border-left: 1px solid var(--btn-bg);
+  border-right: 1px solid var(--btn-bg);
 }
 .nav-last {
-  border-right: 1px solid grey;
+  border-right: 1px solid var(--btn-bg);
   border-radius: 0 5px 5px 0;
 }
 
@@ -132,7 +133,7 @@ nav {
   gap: 2rem;
 }
 .home-left {
-  flex: 80%;
+  flex: 70%;
   flex-direction: column;
 }
 .slide-container {
@@ -145,7 +146,7 @@ nav {
   width: 100%;
 }
 .btn-arrow {
-  color: rgb(37, 36, 36);
+  color: var(--btn-bg);
   width: 3em;
   height: 3em;
   background-color: #ffffff70;
@@ -177,24 +178,6 @@ nav {
   width: fit-content;
   margin: 0 auto;
 }
-@media only screen and (max-width: 768px) {
-  .home-content {
-    flex-direction: column;
-  }
-  .home-left {
-    flex: 100%;
-    margin-right: 0;
-    margin-bottom: 2rem;
-  }
-  .btn-arrow {
-    width: 2em;
-    height: 2em;
-  }
-  .testimony {
-    text-align: center;
-  }
-}
-
 .user {
   padding: 2rem 0;
   width: 250px;
@@ -211,10 +194,14 @@ nav {
   height: 2px;
   margin: 0.5rem auto;
 }
+.feature {
+  padding: 0 5rem 0 1rem;
+}
 .feature-item {
   flex-direction: row;
   align-items: center;
   margin: 1rem 0;
+  gap: 1rem;
 }
 .text-icon {
   min-width: 2.5rem;
@@ -224,16 +211,37 @@ nav {
   line-height: 2.5rem;
   text-align: center;
   background-color: var(--container-bg);
-  color: #798da3;
+  color: var(--text);
   border-radius: 50px;
   font-weight: bold;
-  margin-right: 1rem;
+  box-shadow: var(--shadow);
+}
+@media only screen and (max-width: 768px) {
+  .home-content {
+    flex-direction: column;
+  }
+  .home-left {
+    flex: 100%;
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
+  .btn-arrow {
+    width: 2em;
+    height: 2em;
+  }
+  .testimony {
+    text-align: center;
+  }
+  .feature {
+    padding: 0 1rem;
+  }
 }
 
+/* home right */
 .home-right {
   display: flex;
   flex-direction: column;
-  flex: 20%;
+  flex: 30%;
   background-color: var(--container-bg);
   padding: 2rem 2rem;
   border-radius: 5px;
@@ -274,7 +282,12 @@ textarea {
   border-radius: 5px;
   border: none;
   background-color: var(--btn-bg);
-  color: #fff;
+  box-shadow: var(--shadow);
+  color: var(--container-bg);
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: var(--text);
 }
 
 /* Our Package */
@@ -284,9 +297,8 @@ textarea {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 3rem;
+  margin: 3rem 0 2rem 0;
   background-color: var(--container-bg);
-  box-shadow: var(--shadow);
 }
 
 .grid-container {
@@ -295,7 +307,11 @@ textarea {
 }
 .grid-item {
   display: flex;
-  padding: 4rem;
+  padding: 3rem;
+  gap: 1rem;
+}
+.package-text h4 {
+  margin-bottom: 1rem;
 }
 @media screen and (max-width: 768px) {
   .grid-container {
@@ -303,7 +319,7 @@ textarea {
     grid-template-columns: 1fr;
   }
   .grid-item {
-    padding: 2rem 0;
+    padding: 2rem;
   }
   #our-package .border-section {
     display: none;
@@ -357,6 +373,6 @@ footer {
 }
 .term-service a {
   text-decoration: none;
-  color: #798da3;
+  color: var(--text);
   padding: 0 0.5rem;
 }

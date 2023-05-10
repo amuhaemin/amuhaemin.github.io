@@ -1,14 +1,15 @@
 function validateForm() {
   const name = document.forms['contactUs']['name'].value;
   const email = document.forms['contactUs']['email'].value;
-  //   const interest = document.forms['contactUs']['interest-pick'].value
+  const phone = document.forms['contactUs']['phone'].value;
+  const message = document.forms['contactUs']['message'].value;
 
-  if (name == '' || email == '') {
-    alert('tidak boleh kosong');
+  if (name == '' || email == '' || phone == '' || message == '') {
+    alert('Silahkan isi form dengan benar');
     return false;
   }
-
-  return false;
+  alert('Form terkirim');
+  return true;
 }
 
 // Slides handler
