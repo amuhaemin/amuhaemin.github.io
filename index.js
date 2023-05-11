@@ -4,24 +4,43 @@ function validateForm() {
   const phone = document.forms['contactUs']['phone'].value;
   const message = document.forms['contactUs']['message'].value;
 
-  if (name == '' || email == '' || phone == '' || message == '') {
-    alert('Silahkan isi form dengan benar');
+  if (name == '') {
+    alert('Your Name tidak boleh kosong');
     return false;
   }
-  alert('Form terkirim');
+  if (email == '') {
+    alert('Email Address tidak boleh kosong');
+    return false;
+  }
+  if (phone == '') {
+    alert('Phone Number tidak boleh kosong');
+    return false;
+  }
+  if (message == '') {
+    alert('Ups! Kamu lupa memasukkan message');
+    return false;
+  }
+  alert('Form berhasil dikirim!');
   return true;
 }
 
 // Slides handler
 let slideIndex = 0;
+let testimonyIndex = 0;
 showDiv(slideIndex);
+showTestimony(testimonyIndex);
 
 function countDivs(n) {
   showDiv((slideIndex += n));
 }
 
+function testimonyDivs(n) {
+  showTestimony((testimonyIndex += n));
+}
+
 function showDiv(n) {
   let slides = [...document.getElementsByClassName('image-slide')];
+
   if (n > slides.length - 1) {
     slideIndex = 0;
   } else if (n < 0) {
@@ -32,8 +51,21 @@ function showDiv(n) {
   });
 }
 
+function showTestimony(n) {
+  let testimony = [...document.getElementsByClassName('testimony')];
+  if (n > testimony.length - 1) {
+    testimonyIndex = 0;
+  }
+  testimony.forEach((e, i) => {
+    i != testimonyIndex
+      ? (e.style.display = 'none')
+      : (e.style.display = 'block');
+  });
+}
+
 setInterval(() => {
   countDivs(1);
+  testimonyDivs(1);
 }, 3000);
 
 // Hide Navbar on scroll

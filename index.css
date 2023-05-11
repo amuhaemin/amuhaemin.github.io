@@ -171,7 +171,9 @@ nav {
   transform: translateY(-50%);
   border-radius: 5px 0 0 5px;
 }
-
+.testimony-container {
+  min-height: 163px;
+}
 .testimony {
   flex-direction: column;
   padding: 1rem 0;
@@ -232,6 +234,7 @@ nav {
   .testimony {
     text-align: center;
   }
+
   .feature {
     padding: 0 1rem;
   }
